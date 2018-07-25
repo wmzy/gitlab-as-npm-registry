@@ -1,13 +1,13 @@
-[![Build Status](https://travis-ci.org/wmzy/gitlab-as-npm-registry.svg?branch=master)](https://travis-ci.org/wmzy/gitlab-as-npm-registry)
-[![Coverage Status](https://coveralls.io/repos/github/wmzy/gitlab-as-npm-registry/badge.svg?branch=master)](https://coveralls.io/github/wmzy/gitlab-as-npm-registry?branch=master)
+[![Build Status](https://travis-ci.org/wmzy/package-map.svg?branch=master)](https://travis-ci.org/wmzy/package-map)
+[![Coverage Status](https://coveralls.io/repos/github/wmzy/package-map/badge.svg?branch=master)](https://coveralls.io/github/wmzy/package-map?branch=master)
 # Gitlab as npm registry
 
-> Gitlab as npm registry.
+> Source code + ci/cd = private npm registry.
 
 ## Install
 
 ```bash
-npm install gitlab-as-npm-registry
+npm install package-map
 ```
 
 ## Usage

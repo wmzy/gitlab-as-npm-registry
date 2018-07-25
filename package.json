@@ -1,5 +1,5 @@
 {
-  "name": "gitlab-as-npm-registry",
+  "name": "package-map",
   "version": "0.1.0",
   "description": "gitlab as npm registry",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wmzy/gitlab-as-npm-registry.git"
+    "url": "git+https://github.com/wmzy/package-map.git"
   },
   "keywords": [
     "gitlab",
@@ -19,9 +19,9 @@
   "author": "wmzy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wmzy/gitlab-as-npm-registry/issues"
+    "url": "https://github.com/wmzy/package-map/issues"
   },
-  "homepage": "https://github.com/wmzy/gitlab-as-npm-registry#readme",
+  "homepage": "https://github.com/wmzy/package-map#readme",
   "dependencies": {
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
