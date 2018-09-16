@@ -1,5 +1,4 @@
 const config = require('config');
-const _ = require('lodash/fp');
 const logger = require('pino')();
 const Koa = require('koa');
 const pino = require('koa-pino-logger');
@@ -31,7 +30,7 @@ app.use(route('/:ns/:package/-/:tar', async ctx => {
   const ns = ctx.params.ns;
   const pkg = ctx.params.package;
   const tar = ctx.params.tar;
-  const backend = new Backend(config, getAuthToken(ctx.headers));
+  const backend = new Backend(config, util.getAuthToken(ctx.headers));
   ctx.body = await backend.getTarStream(ns, pkg, tar);
 }))
 

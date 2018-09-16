@@ -1,4 +1,5 @@
 const unzip = require('unzip');
+const _ = require('lodash/fp');
 const Gitlab = require('./gitlab-client');
 
 module.exports = class Backend {
