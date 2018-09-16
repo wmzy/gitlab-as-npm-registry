@@ -6,29 +6,29 @@ module.exports = class Backend {
     this.client = new Gitlab(config.get('baseURL'), token);
   }
 
-  getTarStream(ns, package, tar) {
+  getTarStream(ns, pkg, tar) {
     const version = 'v' + _.last(tar.split('-')).slice(0, -4);
-    return this.client.downloadArtifacts(`${ns.slice(1)}/${package}`, version, 'pack')
+    return this.client.downloadArtifacts(`${ns.slice(1)}/${pkg}`, version, 'pack')
       .then(res => new Promise(resolve => res.pipe(unzip.Parse()).on('entry', resolve)));
   }
 
-  getPackage(package) {
-    return this.client.projectTags(package.slice(1))
+  getPackage(pkg) {
+    return this.client.projectTags(pkg.slice(1))
       .then(tags => (
         {
-          _id: package,
-          name: package,
+          _id: pkg,
+          name: pkg,
           'dist-tags': {
             latest: tags[0].name.slice(1)
           },
           versions: tags.reduce((previous, current) => {
             const v = current.name.slice(1);
             previous[v] = {
-              _id: package + '@' + v,
-              name: package,
+              _id: pkg + '@' + v,
+              name: pkg,
               version: v,
               dist: {
-                tarball: `http://localhost:3000/${package}/-/${package.split('/')[1]}-${v}.tgz`
+                tarball: `http://localhost:3000/${pkg}/-/${pkg.split('/')[1]}-${v}.tgz`
               },
             }
             return previous;

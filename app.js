@@ -29,17 +29,17 @@ app.use(route('/-/user/org.couchdb.user:username', ctx => {
 
 app.use(route('/:ns/:package/-/:tar', async ctx => {
   const ns = ctx.params.ns;
-  const package = ctx.params.package;
+  const pkg = ctx.params.package;
   const tar = ctx.params.tar;
   const backend = new Backend(config, getAuthToken(ctx.headers));
-  ctx.body = await backend.getTarStream(ns, package, tar);
+  ctx.body = await backend.getTarStream(ns, pkg, tar);
 }))
 
 app.use(route('/:package', async ctx => {
-  const package = ctx.params.package;
+  const pkg = ctx.params.package;
 
   const backend = new Backend(config, util.getAuthToken(ctx.headers));
-  ctx.body = await backend.getPackage(package);
+  ctx.body = await backend.getPackage(pkg);
 }))
 
 module.exports = app;
