@@ -7,7 +7,7 @@
     "start": "node server | pino-pretty",
     "commit": "git-cz",
     "lint": "eslint --fix .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive --exclude fixtures -r should -r should-sinon"
   },
   "repository": {
     "type": "git",
@@ -41,16 +41,22 @@
   },
   "devDependencies": {
     "commitizen": "^2.10.1",
+    "cross-env": "^5.2.0",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.6.0",
     "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-mocha": "^5.2.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-security": "^1.4.0",
     "husky": "^1.0.0-rc.14",
     "lint-staged": "^7.3.0",
+    "mocha": "^5.2.0",
     "pino-pretty": "^2.2.0",
-    "prettier": "^1.14.3"
+    "prettier": "^1.14.3",
+    "should": "^13.2.3",
+    "should-sinon": "0.0.6",
+    "sinon": "^6.3.4"
   },
   "husky": {
     "hooks": {

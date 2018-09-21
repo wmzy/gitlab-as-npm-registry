@@ -1,0 +1,8 @@
+{
+  "name": "@gitlab/b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "wmzy",
+  "license": "ISC"
+}
