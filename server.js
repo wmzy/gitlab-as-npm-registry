@@ -2,10 +2,11 @@ process.on('unhandledRejection', reason => {
   throw reason;
 });
 
+const config = require('config');
 const app = require('./app');
+const port = config.get('port');
 
-app.listen(3000);
+app.listen(port);
 
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-  console.log('http://localhost:3000');
-}
+// eslint-disable-next-line no-console
+console.log(`app started at http://localhost:${port}`);

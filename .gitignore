@@ -16,3 +16,8 @@ coverage
 .vscode
 
 .DS_Store
+
+tmp
+
+*.zip
+*.tgz

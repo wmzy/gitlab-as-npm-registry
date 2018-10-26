@@ -7,7 +7,7 @@
     "start": "node server | pino-pretty",
     "commit": "git-cz",
     "lint": "eslint --fix .",
-    "test": "mocha --recursive --exclude fixtures -r should -r should-sinon"
+    "test": "mocha --recursive --exclude mock --exclude fixtures -r should -r should-sinon"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/wmzy/package-map#readme",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=8.3.0"
   },
   "dependencies": {
     "config": "^1.31.0",
@@ -49,9 +49,11 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-security": "^1.4.0",
+    "fetch-mock": "^7.2.0",
     "husky": "^1.0.0-rc.14",
     "lint-staged": "^7.3.0",
     "mocha": "^5.2.0",
+    "node-fetch": "^2.2.0",
     "pino-pretty": "^2.2.0",
     "prettier": "^1.14.3",
     "should": "^13.2.3",
